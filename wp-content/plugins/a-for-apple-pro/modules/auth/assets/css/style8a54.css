@@ -1,0 +1,569 @@
+/* Registration Form */
+.wdt-registration-form {
+    padding: 80px;
+    background-color: rgba(var(--wdtAccentTxtColorRgb), 1);
+    width: 100%;
+    max-width: 650px;
+    border-radius: var(--wdtRadius_3X);
+    margin: 0 auto;
+    margin-bottom: 120px;
+    border: 2px dashed var(--wdtSecondaryColor);
+}
+
+.wdt-registration-form form {
+    margin-top: clamp(2.5rem, 2.2115rem + 1.2821vw, 3.75rem);
+    /* 40px to 60px */
+}
+
+.wdt-registration-form .a-for-apple-custom-auth-sc-border-title h2 {
+    text-align: center;
+}
+
+.wdt-registration-form p {
+    text-align: center;
+    font-weight: var(--wdtFontWeight_H6);
+    margin-bottom: clamp(1.25rem, 1.1058rem + 0.641vw, 1.875rem);
+    /* 20px to 30px */
+}
+
+.wdt-registration-form p strong {
+    font-weight: var(--wdtFontWeight_H6);
+}
+
+.wdt-registration-form form p {
+    text-align: left;
+    color: var(--wdtBodyTxtColor);
+}
+
+.wdt-registration-form form p:last-child {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.wdt-registration-form form p a.a-for-apple-pro-login-link {
+    color: var(--wdtLinkHoverColor);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+}
+
+.wdt-registration-form form p a.a-for-apple-pro-login-link:hover {
+    text-decoration-color: currentColor;
+}
+
+.wdt-registration-form form#loginform {
+    display: block;
+}
+
+.a-for-apple-pro-login-description {
+    text-align: center;
+}
+
+.wdt-registration-form input[type="submit"] {
+    width: 100%;
+    font-size: 1rem;
+    font-family: var(--wdtFontTypo_Alt);
+    font-weight: calc(var(--wdtFontWeight_Alt) - 100);
+    padding: var(--wdtPadding_Btn);
+    border-radius: var(--wdtRadius_Part);
+    text-transform: uppercase;
+}
+
+.wdt-registration-form input[type="submit"]:hover {
+    background-color: var(--wdtSecondaryColor);
+    color: var(--wdtAccentTxtColor);
+}
+
+.a-for-apple-pro-login-form-holder #loginform p {
+    margin: 0 0 0 0;
+}
+
+.a-for-apple-pro-login-form-holder #loginform {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    grid-gap: 20px;
+}
+
+.a-for-apple-pro-login-form-holder #loginform p .input,
+.wdt-registration-form form p .input {
+    padding: clamp(0.75rem, 0.6923rem + 0.2564vw, 1rem) clamp(1.625rem, 1.5673rem + 0.2564vw, 1.875rem);
+    /* 12px to 16px and 26px to 30px */
+    background-color: rgba(var(--wdtBorderColorRgb), 0.1);
+    border-color: transparent;
+    -webkit-border-radius: var(--wdtRadius_Part);
+    border-radius: var(--wdtRadius_Part);
+}
+
+.wdt-registration-form form p input[type="email"]:focus {
+    border-color: var(--wdtLinkHoverColor);
+}
+
+/* Login form */
+
+.a-for-apple-pro-login-form-container {
+    display: block;
+    height: 100% !important;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    width: 100%;
+    z-index: 10000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.a-for-apple-pro-login-form-overlay {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    background: rgba(var(--wdtBodyBGColorRgb), 1);
+}
+
+.login-form-custom-logo {
+    text-align: center;
+    margin: 10px 0;
+    margin-bottom: clamp(1.25rem, 1rem + 1.25vw, 2.5rem);
+    /*----min-20px and max-40px-----*/
+}
+
+.login-form-custom-logo img {
+    max-width: 170px;
+}
+
+.a-for-apple-pro-login-form-holder>*:not(:last-child),
+.a-for-apple-pro-login-form-container .a-for-apple-pro-login-form>*:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.a-for-apple-pro-login-form-container .a-for-apple-pro-login-form {
+    display: grid;
+    padding: 0;
+    pointer-events: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%); */
+    background-color: rgba(var(--wdtBodyBGColorRgb), 1);
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    place-content: center;
+    pointer-events: none;
+}
+
+.a-for-apple-pro-login-form-container .a-for-apple-pro-login-form .a-for-apple-pro-login-form-wrapper {
+    padding: 70px;
+    border-radius: var(--wdtRadius_3X);
+    border: 2px dashed;
+    max-width: 820px;
+    height: fit-content;
+    overflow-y: auto;
+    max-height: calc(100vh - 2*1.5em);
+    background-color: rgba(var(--wdtAccentTxtColorRgb), 1);
+    pointer-events: painted;
+}
+
+.a-for-apple-pro-login-form-container .a-for-apple-pro-login-form .a-for-apple-pro-title.a-for-apple-pro-login-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: clamp(1.25rem, 1rem + 1.25vw, 2.5rem);
+    /*----min-20px and max-40px-----*/
+}
+
+
+#loginform .login-username,
+#loginform .login-password {
+    width: 100%;
+}
+
+#loginform .login-remember {
+    text-align: left;
+}
+
+#loginform p.login-remember input[type="checkbox"] {
+    opacity: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1em;
+    height: 1em;
+    border: 1px solid var(--wdtBorderColor);
+    transform: translateY(-0.075em);
+    display: inline-grid;
+    place-content: center;
+    background: rgba(var(--wdtTertiaryColorRgb), .0);
+    border-radius: 2px;
+    padding: 0 0;
+}
+
+#loginform p.login-remember input[type="checkbox"]:after {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--wdtPrimaryColor);
+}
+
+#loginform p.login-remember input[type="checkbox"]:checked:after {
+    transform: scale(1);
+}
+
+#loginform input[type="text"]:focus,
+#loginform input[type="password"]:focus {
+    border-color: var(--wdtPrimaryColor);
+}
+
+#loginform .login-submit input[type="submit"] {
+    width: 100%;
+    font-size: 1rem;
+    font-family: var(--wdtFontTypo_Alt);
+    font-weight: calc(var(--wdtFontWeight_Alt) - 100);
+    padding: var(--wdtPadding_Btn);
+    border-radius: var(--wdtRadius_Part);
+    text-transform: uppercase;
+    background-color: var(--wdtPrimaryColor);
+}
+
+#loginform .login-submit input[type="submit"]:hover {
+    background-color: var(--wdtSecondaryColor);
+    color: var(--wdtAccentTxtColor);
+}
+
+
+.a-for-apple-pro-social-logins-divider {
+    text-align: center;
+    margin: 18px 0 20px;
+}
+
+.a-for-apple-pro-social-google-logins-container .a-for-apple-pro-social-logins-divider {
+    margin: 20px 0;
+}
+
+.a-for-apple-pro-title.a-for-apple-pro-login-title h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.a-for-apple-pro-login-form-container .a-for-apple-pro-login-form .a-for-apple-pro-login-form-holder p.tpl-forget-pwd {
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.a-for-apple-pro-login-form-container .a-for-apple-pro-login-form .a-for-apple-pro-login-form-holder p.tpl-forget-pwd a {
+    color: var(--wdtLinkHoverColor);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.3s linear;
+}
+
+.a-for-apple-pro-login-form-container .a-for-apple-pro-login-form .a-for-apple-pro-login-form-holder p.tpl-forget-pwd a:hover {
+    text-decoration-color: var(--wdtLinkHoverColor);
+}
+
+.a-for-apple-pro-login-form-holder #loginform p.login-username {
+    margin-bottom: clamp(0.3125rem, 0.2115rem + 0.4487vw, 0.75rem);
+    /* 5px to 12px */
+}
+
+a.a-for-apple-pro-social-facebook-connect,
+a.a-for-apple-pro-social-google-connect {
+    width: 100%;
+    padding: var(--wdtPadding_Btn);
+    display: inline-block;
+    text-align: center;
+    /* background: var(--wdtAccentTxtColor); */
+    color: var(--wdt-elementor-color-black);
+    border-radius: var(--wdtRadius_Part);
+    box-shadow: rgba(var(--wdtLinkHoverColorRgb), 1) 0 0 0px;
+    border: 1px solid rgba(var(--wdtBorderColorRgb), 0.6);
+    margin: 0;
+    font-size: 1rem;
+    font-weight: var(--wdtFontWeight_Ext);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+a.a-for-apple-pro-social-facebook-connect:hover,
+a.a-for-apple-pro-social-google-connect:hover {
+    background-color: var(--wdtPrimaryColor);
+    color: rgba(var(--wdtAccentTxtColorRgb), 1);
+    border-color: rgba(var(--wdtPrimaryColorRgb), 1);
+}
+
+a.a-for-apple-pro-social-facebook-connect i,
+a.a-for-apple-pro-social-google-connect i {
+    margin-right: 4px;
+}
+
+.a-for-apple-pro-login-form-container {
+    max-width: 1640px;
+    margin: auto;
+}
+
+a.a-for-apple-pro-social-facebook-connect i {
+    width: 20px;
+    height: 20px;
+    color: var(--wdtAccentTxtColor);
+    background-color: #185BB0;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+}
+
+a.a-for-apple-pro-social-google-connect svg .google-color-1 {
+    fill: #4280EF;
+}
+
+a.a-for-apple-pro-social-google-connect svg .google-color-2 {
+    fill: #34A353;
+}
+
+a.a-for-apple-pro-social-google-connect svg .google-color-3 {
+    fill: #F6B704;
+}
+
+a.a-for-apple-pro-social-google-connect svg .google-color-4 {
+    fill: #E54335;
+}
+
+.a-for-apple-pro-social-logins-divider {
+    display: flex;
+    align-items: center;
+}
+
+.a-for-apple-pro-social-logins-divider:before {
+    position: relative;
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(var(--wdtBorderColorRgb), .5);
+    margin-right: 10px;
+}
+
+.a-for-apple-pro-social-logins-divider:after {
+    position: relative;
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(var(--wdtBorderColorRgb), .5);
+    margin-left: 10px
+}
+
+@media only screen and (max-width:1540px) {
+    .a-for-apple-pro-title.a-for-apple-pro-login-title h2 {
+        font-size: var(--wdtFontSize_H3);
+    }
+
+    .a-for-apple-pro-login-form #loginform {
+        margin-top: 0;
+    }
+
+    .a-for-apple-pro-social-logins-divider {
+        margin-top: 20px;
+        margin-bottom: clamp(0.625rem, 0.2436rem + 1.6949vw, 1.875rem);
+        /* 10px to 30px */
+    }
+
+    #loginform {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: space-between;
+        grid-gap: 20px;
+    }
+
+    #loginform .login-submit {
+        margin-bottom: 0;
+        grid-area: 3/1;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1540px) {
+    /* .a-for-apple-pro-login-form-holder #loginform {
+        grid-template-columns: repeat(2, 1fr);
+    } */
+}
+
+@media screen and (min-width:1281px) and (max-width: 1540px) {
+    .a-for-apple-pro-login-form-container {
+        max-width: 1080px;
+        margin: auto;
+    }
+
+    .a-for-apple-pro-login-form-holder>*:not(:last-child),
+    .a-for-apple-pro-login-form-container .a-for-apple-pro-login-form>*:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width:1025px) and (max-width: 1280px) {
+    .a-for-apple-pro-login-form-container {
+        max-width: 900px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width: 1024px) {
+    .a-for-apple-pro-login-form-container {
+        max-width: 710px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    #loginform .login-username,
+    #loginform .login-password {
+        margin-bottom: 20px;
+    }
+
+    .a-for-apple-pro-login-form-container {
+        overflow: scroll;
+    }
+
+    .a-for-apple-pro-login-form-container .a-for-apple-pro-login-form .a-for-apple-pro-login-form-wrapper {
+        padding: 30px;
+        max-width: 420px;
+        margin: 0 20px;
+        width: calc(100% - 40px);
+    }
+
+    .a-for-apple-pro-title.a-for-apple-pro-login-title h2 {
+        font-size: var(--wdtFontSize_H4);
+    }
+
+    .wdt-registration-form {
+        padding: 30px;
+    }
+
+    .wdt-registration-form .a-for-apple-custom-auth-sc-border-title h2 {
+        font-size: var(--wdtFontSize_H3);
+    }
+}
+
+@media screen and (min-width:480px) and (max-width: 767px) {
+    .a-for-apple-pro-login-form-container {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 479px) {
+
+    a.a-for-apple-pro-social-facebook-connect,
+    a.a-for-apple-pro-social-google-connect {
+        padding: 10px;
+    }
+
+    .a-for-apple-pro-login-form-container {
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .a-for-apple-pro-title.a-for-apple-pro-login-title h2 {
+        font-size: var(--wdtFontSize_H4);
+    }
+
+    .wdt-registration-form .a-for-apple-custom-auth-sc-border-title h2 {
+        font-size: var(--wdtFontSize_H4);
+    }
+}
+
+
+
+/* After Registration */
+.mu_register {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 50px;
+    background: var(--wdtSecondaryColor);
+    box-shadow: rgba(0, 0, 0, .8) 0 0 40px;
+    border-radius: var(--wdtRadius_3X);
+}
+
+.mu_register h2 {
+    font-size: var(--wdtFontSize_H4);
+    text-align: center;
+}
+
+.mu_register form input {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 1px solid transparent;
+}
+
+.mu_register form input:focus {
+    border-color: var(--wdtPrimaryColor);
+}
+
+.mu_register form .wp-signup-username-description,
+.mu_register form .wp-signup-email-description {
+    margin-bottom: 15px;
+}
+
+.mu_register p.submit {
+
+    margin-top: 20px;
+}
+
+.mu_register form p.submit input[type="submit"] {
+    font-size: var(--wdtFontSize_Base);
+}
+
+@media screen and (max-width: 479px) {
+    .a-for-apple-pro-login-form-container .a-for-apple-pro-login-form .a-for-apple-pro-login-form-wrapper {
+        padding: 20px;
+        margin: 0 15px;
+        width: calc(100% - 30px);
+    }
+
+    .mu_register {
+        padding: 30px;
+    }
+}
+
+
+@media only screen and (min-width:1281px) and (max-width:1540px) {
+    .wdt-registration-form {
+        margin-bottom: 100px;
+    }
+}
+
+@media only screen and (min-width:1025px) and (max-width:1280px) {
+    .wdt-registration-form {
+        margin-bottom: 80px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .wdt-registration-form {
+        margin-bottom: 70px;
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width:767px) {
+    .wdt-registration-form {
+        margin-bottom: 60px;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .wdt-registration-form {
+        margin-bottom: 60px;
+    }
+}

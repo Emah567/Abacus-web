@@ -1,0 +1,145 @@
+/*--------------------------------------------------------------
+    Loader
+--------------------------------------------------------------*/
+
+.pre-loader {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999991;
+  /* background-color: var(--wdtBodyBGColor); */
+}
+
+/* .loader-inner { text-transform:uppercase; width:100%; text-align:center; line-height:50px; margin:auto; position:absolute; left:0;right:0;top:50%; transform:translateY(-50%); } .loader-inner .loader-text { color: var(--wdtHeadAltColor); font-family: var(--wdtFontTypo_Alt); font-size: var(--wdtFontSize_H6); font-weight: bold; padding: 5px 15px; position:relative; z-index:0; } .loader-inner .loader-text:before { content:''; background: #f4f4f4; display:block; margin: 0 -15px; position:absolute; top:0;left:0;right:0;bottom:0; z-index: -2; -webkit-animation:2s loadingBefore infinite ease-in-out; animation:2s loadingBefore infinite ease-in-out; } .loader-inner .loader-text:after { content:''; width:14px; height:60px; display:block; margin:auto; opacity:0.75; position:absolute; top:0;left:0;right:0;bottom:0; z-index: -1; animation:2s loadingAfter infinite ease-in-out; } @-webkit-keyframes loadingBefore { 0%   {transform:translateX(-15px);} 50%  {transform:translateX(15px);} 100% {transform:translateX(-15px);} } @keyframes loadingBefore { 0%   {transform:translateX(-15px);} 50%  {transform:translateX(15px);} 100% {transform:translateX(-15px);} } @-webkit-keyframes loadingAfter { 0%   {transform:translateX(-50px);} 50%  {transform:translateX(50px);} 100% {transform:translateX(-50px);} } @keyframes loadingAfter { 0%   {transform:translateX(-50px);} 50%  {transform:translateX(50px);} 100% {transform:translateX(-50px);} } */
+
+.loader-inner {
+  bottom: 0;
+  height: 60px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+}
+
+.wdt-loader-line-wrapper {
+  animation: spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite;
+  box-sizing: border-box;
+  height: 50px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transform-origin: 50% 100%;
+  width: 100px;
+}
+
+.wdt-loader-line {
+  border: 4px solid transparent;
+  border-radius: 100%;
+  box-sizing: border-box;
+  height: 100px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+}
+
+.wdt-loader-line-wrapper:nth-child(1) {
+  animation-delay: -50ms;
+}
+
+.wdt-loader-line-wrapper:nth-child(2) {
+  animation-delay: -100ms;
+}
+
+.wdt-loader-line-wrapper:nth-child(3) {
+  animation-delay: -150ms;
+}
+
+.wdt-loader-line-wrapper:nth-child(4) {
+  animation-delay: -200ms;
+}
+
+.wdt-loader-line-wrapper:nth-child(5) {
+  animation-delay: -250ms;
+}
+
+.wdt-loader-line-wrapper:nth-child(1) .wdt-loader-line {
+  border-color: rgb(235, 71, 71);
+  height: 90px;
+  width: 90px;
+  top: 7px;
+}
+
+.wdt-loader-line-wrapper:nth-child(2) .wdt-loader-line {
+  border-color: rgb(235, 235, 71);
+  height: 76px;
+  width: 76px;
+  top: 14px;
+}
+
+.wdt-loader-line-wrapper:nth-child(3) .wdt-loader-line {
+  border-color: rgb(71, 235, 71);
+  height: 62px;
+  width: 62px;
+  top: 21px;
+}
+
+.wdt-loader-line-wrapper:nth-child(4) .wdt-loader-line {
+  border-color: rgb(71, 235, 235);
+  height: 48px;
+  width: 48px;
+  top: 28px;
+}
+
+.wdt-loader-line-wrapper:nth-child(5) .wdt-loader-line {
+  border-color: rgb(71, 71, 235);
+  height: 34px;
+  width: 34px;
+  top: 35px;
+}
+
+@keyframes spin {
+
+  0%,
+  15% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+/*--------------------------------------------------------------
+    Accents
+--------------------------------------------------------------*/
+
+.loader-inner .loader-text:after {
+  background-color: var(--wdtPrimaryColor);
+}
+
+
+/*--------------------------------------------------------------
+    Responsive
+--------------------------------------------------------------*/
+
+/*----*****---- << Mobile (Landscape) >> ----*****----*/
+
+/* Note: Design for a width of 480px */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+
+/* Common Styles for the devices below 479px width */
+
+@media only screen and (max-width: 479px) {}

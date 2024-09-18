@@ -1,0 +1,24 @@
+
+
+h1, h2, h3, h4 h5 {
+    text-transform: uppercase !important;
+  }
+  
+
+
+.elementor-21873 .elementor-element.elementor-element-2a26165 {
+    width: var(--container-widget-width, 100%) !important;
+    max-width: 1 !important;
+    --container-widget-width: 100% !important;
+    --container-widget-flex-grow: 0;
+}
+
+.hero-txt{
+    align-items: start;
+    margin-bottom: 2rem;
+
+}
+
+li a span{
+    text-transform: uppercase !important;
+}
